@@ -73,6 +73,8 @@
             font-size: 0.9rem;
             box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
             transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
         }
 
         .btn-check-availability:hover {
@@ -310,7 +312,7 @@
             <div class="logo-dreamy">DREAMY <span>RENT</span></div>
             <div class="logo-sub">Luxury Property<br>Management</div>
         </div>
-        <a href="#" class="btn-check-availability" onclick="openModal('בדיקת זמינות כללית')">בדוק זמינות &lt;&lt;</a>
+        <button class="btn-check-availability" onclick="openModal('בדיקת זמינות כללית')">בדוק זמינות &lt;&lt;</button>
     </header>
 
     <section class="hero-section">
@@ -332,54 +334,56 @@
             <!-- 1. פנטהאוז קסם המפרץ -->
             <div class="property-card">
                 <div class="card-img-wrapper">
-                    <span class="card-badge">דירת גן יוקרתית</span>
-                    <img src="images/property_1.jpg" alt="קטלינה גארדן (Catalina Garden)" class="card-img">
+                    <span class="card-badge">פנטהאוז יוקרתי</span>
+                    <img src="property_1.jpg" alt="פנטהאוז קסם המפרץ" class="card-img" loading="lazy">
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">קטלינה גארדן (Catalina Garden)</h3>
+                    <h3 class="card-title">פנטהאוז קסם המפרץ</h3>
                     <div class="card-location">📍 אילת | נוף פנורמי לים</div>
                     <p class="card-desc">4 חדרי שינה, בריכה פרטית מחוממת, מעלית פרטית, מרפסת שמש ענקית ושולחן פינג-פונג. אידיאלי לקבוצות ומשפחות.</p>
-                    <button class="btn-order-now" onclick="openModal('קטלינה גארדן (Catalina Garden)')">להזמנות לחצו כאן</button>
+                    <button class="btn-order-now" onclick="openModal('פנטהאוז קסם המפרץ')">להזמנות לחצו כאן</button>
                 </div>
             </div>
 
+            <!-- 2. כליל הים -->
             <div class="property-card">
                 <div class="card-img-wrapper">
-                    <span class="card-badge">וילה יוקרתית</span>
-                    <img src="images/property_2.jpg" alt="אקווה ויסטה" class="card-img">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-title">אקווה ויסטה</h3>
-                    <div class="card-location">📍 אילת | נוף להרים ולים</div>
-                    <p class="card-desc">בריכת שחייה פרטית, חצר מטופחת, מרפסת שמש ואווירה פסטורלית ושקטה במיוחד.</p>
-                    <button class="btn-order-now" onclick="openModal('אקווה ויסטה')">להזמנות לחצו כאן</button>
-                </div>
-            </div>
-
-            <div class="property-card">
-                <div class="card-img-wrapper">
-                    <span class="card-badge">דירה יוקרתית</span>
-                    <img src="images/property_3.jpg" alt="כליל הים" class="card-img">
+                    <span class="card-badge">מתחם אירוח</span>
+                    <img src="property_2.jpg" alt="כליל הים" class="card-img" loading="lazy">
                 </div>
                 <div class="card-body">
                     <h3 class="card-title">כליל הים</h3>
+                    <div class="card-location">📍 אילת | נוף להרים ולים</div>
+                    <p class="card-desc">בריכת שחייה פרטית, חצר מטופחת, מרפסת שמש ואווירה פסטורלית ושקטה במיוחד.</p>
+                    <button class="btn-order-now" onclick="openModal('כליל הים')">להזמנות לחצו כאן</button>
+                </div>
+            </div>
+
+            <!-- 3. וילה אקווה ויסטה -->
+            <div class="property-card">
+                <div class="card-img-wrapper">
+                    <span class="card-badge">וילה יוקרתית</span>
+                    <img src="property_3.jpg" alt="וילה אקווה ויסטה" class="card-img" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">וילה אקווה ויסטה</h3>
                     <div class="card-location">📍 אילת | קו ראשון לנוף</div>
                     <p class="card-desc">בריכת שחייה פרטית, מתחם חוץ יוקרתי, חללים מרווחים, מאובזרת לחלוטין לאירוח משפחות וקבוצות.</p>
-                    <button class="btn-order-now" onclick="openModal('כליל הים')">להזמנות לחצו כאן</button>
+                    <button class="btn-order-now" onclick="openModal('וילה אקווה ויסטה')">להזמנות לחצו כאן</button>
                 </div>
             </div>
 
             <!-- 4. אקווה סול -->
             <div class="property-card">
                 <div class="card-img-wrapper">
-                    <span class="card-badge">פנטאהוז על הגג</span>
-                    <img src="images/property_4.jpg" alt="פנטאהוז קסם המפרץ" class="card-img">
+                    <span class="card-badge">וילת בריכה</span>
+                    <img src="property_4.jpg" alt="אקווה סול" class="card-img" loading="lazy">
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">פנטאהוז קסם המפרץ</h3>
+                    <h3 class="card-title">אקווה סול (Aqua Sol)</h3>
                     <div class="card-location">📍 אילת | מתחם יוקרתי</div>
                     <p class="card-desc">עיצוב מודרני מרהיב, בריכת שחייה פרטית, מרפסת שיזוף ואווירת חופשה מושלמת.</p>
-                    <button class="btn-order-now" onclick="openModal('פנטאהוז קסם המפרץ')">להזמנות לחצו כאן</button>
+                    <button class="btn-order-now" onclick="openModal('אקווה סול (Aqua Sol)')">להזמנות לחצו כאן</button>
                 </div>
             </div>
 
@@ -387,13 +391,13 @@
             <div class="property-card">
                 <div class="card-img-wrapper">
                     <span class="card-badge">סוויטת בוטיק</span>
-                    <img src="images/property_5.jpg" alt="אקווה סול" class="card-img">
+                    <img src="property_5.jpg" alt="פנינת הנוף" class="card-img" loading="lazy">
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">אקווה סול</h3>
+                    <h3 class="card-title">פנינת הנוף</h3>
                     <div class="card-location">📍 אילת | נוף עוצר נשימה</div>
                     <p class="card-desc">דירת אירוח יוקרתית בעיצוב אלגנטי, מאובזרת מא' ועד ת' ומציעה פרטיות מלאה ושקט.</p>
-                    <button class="btn-order-now" onclick="openModal('אקווה סול')">להזמנות לחצו כאן</button>
+                    <button class="btn-order-now" onclick="openModal('פנינת הנוף')">להזמנות לחצו כאן</button>
                 </div>
             </div>
 
@@ -401,7 +405,7 @@
             <div class="property-card">
                 <div class="card-img-wrapper">
                     <span class="card-badge">סוויטה יוקרתית</span>
-                    <img src="images/property_6.jpg" alt="סוויטת מנור" class="card-img">
+                    <img src="property_6.jpg" alt="סוויטת מנור" class="card-img" loading="lazy">
                 </div>
                 <div class="card-body">
                     <h3 class="card-title">סוויטת מנור</h3>
@@ -414,14 +418,14 @@
             <!-- 7. קטלינה גארדן -->
             <div class="property-card">
                 <div class="card-img-wrapper">
-                    <span class="card-badge">דירת גן חלומית</span>
-                    <img src="images/property_7.jpg" alt="פנינת הנוף" class="card-img">
+                    <span class="card-badge">דירת גן יוקרתית</span>
+                    <img src="property_7.jpg" alt="קטלינה גארדן" class="card-img" loading="lazy">
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">פנינת הנוף</h3>
+                    <h3 class="card-title">קטלינה גארדן (Catalina Garden)</h3>
                     <div class="card-location">📍 אילת | גינה פרטית מוצלת</div>
                     <p class="card-desc">דירת גן מעוצבת ומאובזרת, פינת ישיבה חיצונית מפנקת, מתאימה למשפחות ולקבוצות המחפשות אווירה ביתית ויוקרתית.</p>
-                    <button class="btn-order-now" onclick="openModal('פנינת הנוף')">להזמנות לחצו כאן</button>
+                    <button class="btn-order-now" onclick="openModal('קטלינה גארדן (Catalina Garden)')">להזמנות לחצו כאן</button>
                 </div>
             </div>
 
@@ -429,7 +433,7 @@
             <div class="property-card">
                 <div class="card-img-wrapper">
                     <span class="card-badge">וילת יוקרה</span>
-                    <img src="images/property_8.jpg" alt="וילה קורנית (Villa Marina Bay)" class="card-img">
+                    <img src="property_8.jpg" alt="וילה קורנית" class="card-img" loading="lazy">
                 </div>
                 <div class="card-body">
                     <h3 class="card-title">וילה קורנית (Villa Marina Bay)</h3>
@@ -449,6 +453,7 @@
             <h2 class="modal-h2" id="modalTitle">בדיקת זמינות והזמנה</h2>
             <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px;">הזינו פרטים והמערכת תעביר אתכם לסליקה מאובטחת בסולק EASYGO:</p>
             <form onsubmit="handleBooking(event)">
+                <input type="hidden" id="selectedPropertyInput" name="property_name">
                 <input type="text" class="form-input" placeholder="שם מלא *" required>
                 <input type="tel" class="form-input" placeholder="טלפון נייד *" required>
                 <input type="date" class="form-input" placeholder="תאריך הגעה" required>
@@ -465,6 +470,7 @@
     <script>
         function openModal(propertyName) {
             document.getElementById('modalTitle').innerText = 'הזמנה עבור: ' + propertyName;
+            document.getElementById('selectedPropertyInput').value = propertyName;
             document.getElementById('bookingModal').style.display = 'flex';
         }
 
@@ -474,7 +480,8 @@
 
         function handleBooking(event) {
             event.preventDefault();
-            alert('הפרטים התקבלו! כעת תועברו לקישור הסליקה המאובטח של EASYGO לעדכון היומן והשלמת התשלום.');
+            const selectedProperty = document.getElementById('selectedPropertyInput').value || 'הנכס הנבחר';
+            alert('הפרטים עבור ' + selectedProperty + ' התקבלו! כעת תועברו לקישור הסליקה המאובטח של EASYGO לעדכון היומן והשלמת התשלום.');
             closeModal();
         }
 
