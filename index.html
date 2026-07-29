@@ -1,496 +1,977 @@
 <!DOCTYPE html>
+
 <html lang="he" dir="rtl">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>DREAMY RENT - נכסי יוקרה ודירות אירוח באילת</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+
     <style>
+
         * {
+
             box-sizing: border-box;
+
             margin: 0;
+
             padding: 0;
+
             font-family: 'Assistant', sans-serif;
+
         }
+
+
 
         body {
+
             background-color: #0f172a;
+
             color: #ffffff;
+
             direction: rtl;
+
             overflow-x: hidden;
+
         }
+
+
 
         header {
+
             position: fixed;
+
             top: 0;
+
             left: 0;
+
             right: 0;
+
             z-index: 1000;
+
             background: rgba(15, 23, 42, 0.95);
+
             backdrop-filter: blur(10px);
+
             padding: 12px 24px;
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
         }
+
+
 
         .logo-box {
+
             display: flex;
+
             align-items: center;
+
             gap: 10px;
+
         }
+
+
 
         .logo-dreamy {
+
             font-size: 1.8rem;
+
             font-weight: 800;
+
             font-family: 'Montserrat', sans-serif;
+
             letter-spacing: 1px;
+
             color: #ffffff;
+
         }
+
+
 
         .logo-dreamy span {
+
             color: #38bdf8;
+
         }
+
+
 
         .logo-sub {
+
             font-size: 0.65rem;
+
             color: #94a3b8;
+
             text-transform: uppercase;
+
             letter-spacing: 1.5px;
+
             line-height: 1;
+
         }
+
+
 
         .btn-check-availability {
+
             background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+
             color: #ffffff;
+
             padding: 8px 18px;
+
             border-radius: 6px;
+
             text-decoration: none;
+
             font-weight: 700;
+
             font-size: 0.9rem;
+
             box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
+
             transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
+
         }
+
+
 
         .btn-check-availability:hover {
+
             background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+
             transform: translateY(-1px);
+
         }
+
+
 
         .hero-section {
+
             position: relative;
+
             padding: 140px 20px 80px;
+
             text-align: center;
+
             background: linear-gradient(to bottom, rgba(15, 23, 42, 0.75) 0%, rgba(15, 23, 42, 0.95) 100%), 
+
                         url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+
         }
+
+
 
         .hero-content {
+
             max-width: 800px;
+
             margin: 0 auto;
+
         }
+
+
 
         .hero-tagline {
+
             font-size: 1.1rem;
+
             color: #38bdf8;
+
             font-weight: 700;
+
             letter-spacing: 2px;
+
             margin-bottom: 10px;
+
         }
+
+
 
         .hero-title {
+
             font-size: 3rem;
+
             font-weight: 800;
+
             line-height: 1.2;
+
             margin-bottom: 15px;
+
         }
+
+
 
         .hero-subtitle {
+
             font-size: 1.25rem;
+
             color: #cbd5e1;
+
             font-weight: 300;
+
             margin-bottom: 25px;
+
         }
+
+
 
         .property-count-badge {
+
             display: inline-block;
+
             background: rgba(56, 189, 248, 0.15);
+
             border: 1px solid rgba(56, 189, 248, 0.4);
+
             color: #38bdf8;
+
             padding: 6px 16px;
+
             border-radius: 20px;
+
             font-size: 0.95rem;
+
             font-weight: 700;
+
         }
+
+
 
         .section-container {
+
             max-width: 1280px;
+
             margin: 40px auto 80px;
+
             padding: 0 20px;
+
         }
+
+
 
         .section-header {
+
             text-align: center;
+
             margin-bottom: 40px;
+
         }
+
+
 
         .section-header h2 {
+
             font-size: 2rem;
+
             font-weight: 800;
+
             color: #ffffff;
+
         }
+
+
 
         .cards-grid {
+
             display: grid;
+
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
             gap: 25px;
+
         }
+
+
 
         .property-card {
+
             background: #1e293b;
+
             border-radius: 12px;
+
             overflow: hidden;
+
             box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
             border: 1px solid rgba(255, 255, 255, 0.08);
+
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+
             display: flex;
+
             flex-direction: column;
+
         }
+
+
 
         .property-card:hover {
+
             transform: translateY(-6px);
+
             box-shadow: 0 18px 35px rgba(0,0,0,0.5);
+
             border-color: rgba(56, 189, 248, 0.4);
+
         }
+
+
 
         .card-img-wrapper {
+
             position: relative;
+
             height: 200px;
+
             overflow: hidden;
+
         }
+
+
 
         .card-img {
+
             width: 100%;
+
             height: 100%;
+
             object-fit: cover;
+
             transition: transform 0.5s ease;
+
         }
+
+
 
         .property-card:hover .card-img {
+
             transform: scale(1.05);
+
         }
+
+
 
         .card-badge {
+
             position: absolute;
+
             top: 12px;
+
             right: 12px;
+
             background: rgba(15, 23, 42, 0.85);
+
             backdrop-filter: blur(4px);
+
             color: #38bdf8;
+
             padding: 4px 10px;
+
             border-radius: 20px;
+
             font-size: 0.75rem;
+
             font-weight: 700;
+
             border: 1px solid rgba(56, 189, 248, 0.3);
+
         }
+
+
 
         .card-body {
+
             padding: 20px;
+
             display: flex;
+
             flex-direction: column;
+
             flex-grow: 1;
+
         }
+
+
 
         .card-title {
+
             font-size: 1.25rem;
+
             font-weight: 700;
+
             margin-bottom: 6px;
+
             color: #ffffff;
+
         }
+
+
 
         .card-location {
+
             font-size: 0.85rem;
+
             color: #38bdf8;
+
             margin-bottom: 10px;
+
         }
+
+
 
         .card-desc {
+
             font-size: 0.9rem;
+
             color: #94a3b8;
+
             margin-bottom: 18px;
+
             line-height: 1.5;
+
             flex-grow: 1;
+
         }
+
+
 
         .btn-order-now {
+
             background: rgba(255, 255, 255, 0.95);
+
             color: #0f172a;
+
             text-align: center;
+
             padding: 10px;
+
             border-radius: 6px;
+
             text-decoration: none;
+
             font-weight: 800;
+
             font-size: 0.95rem;
+
             transition: all 0.2s ease;
+
             cursor: pointer;
+
             border: none;
+
         }
+
+
 
         .btn-order-now:hover {
+
             background: #38bdf8;
+
             color: #ffffff;
+
         }
+
+
 
         .modal {
+
             display: none;
+
             position: fixed;
+
             inset: 0;
+
             z-index: 2000;
+
             background: rgba(0,0,0,0.85);
+
             backdrop-filter: blur(6px);
+
             align-items: center;
+
             justify-content: center;
+
             padding: 20px;
+
         }
+
+
 
         .modal-content {
+
             background: #1e293b;
+
             border-radius: 12px;
+
             max-width: 450px;
+
             width: 100%;
+
             padding: 28px;
+
             border: 1px solid rgba(255,255,255,0.1);
+
             position: relative;
+
         }
+
+
 
         .close-modal {
+
             position: absolute;
+
             top: 15px;
+
             left: 15px;
+
             background: none;
+
             border: none;
+
             color: #94a3b8;
+
             font-size: 1.5rem;
+
             cursor: pointer;
+
         }
+
+
 
         .modal-h2 {
+
             font-size: 1.4rem;
+
             margin-bottom: 8px;
+
             color: #ffffff;
+
         }
+
+
 
         .form-input {
+
             width: 100%;
+
             padding: 10px 14px;
+
             margin-bottom: 12px;
+
             background: #0f172a;
+
             border: 1px solid #334155;
+
             border-radius: 6px;
+
             color: white;
+
             font-size: 0.95rem;
+
         }
+
+
 
         footer {
+
             text-align: center;
+
             padding: 30px 20px;
+
             border-top: 1px solid rgba(255,255,255,0.05);
+
             color: #64748b;
+
             font-size: 0.85rem;
+
         }
+
     </style>
+
 </head>
+
 <body>
 
+
+
     <header>
+
         <div class="logo-box">
+
             <div class="logo-dreamy">DREAMY <span>RENT</span></div>
+
             <div class="logo-sub">Luxury Property<br>Management</div>
+
         </div>
-        <button class="btn-check-availability" onclick="openModal('בדיקת זמינות כללית')">בדוק זמינות &lt;&lt;</button>
+
+        <a href="#" class="btn-check-availability" onclick="openModal('בדיקת זמינות כללית')">בדוק זמינות &lt;&lt;</a>
+
     </header>
 
+
+
     <section class="hero-section">
+
         <div class="hero-content">
+
             <div class="hero-tagline">רוגע, אווירה וסטייל</div>
+
             <h1 class="hero-title">דירות וסוויטות אירוח בסטנדרט אחר!</h1>
+
             <p class="hero-subtitle">ברוכים הבאים ל-DREAMY RENT – מתחם נכסי היוקרה והאירוח המובחרים</p>
+
             <div class="property-count-badge">✨ 8 נכסי אירוח ייחודיים לבחירתכם</div>
+
         </div>
+
     </section>
 
+
+
     <div class="section-container">
+
         <div class="section-header">
+
             <h2>הנכסים שלנו</h2>
+
         </div>
+
+
 
         <div class="cards-grid">
 
+
+
             <!-- 1. פנטהאוז קסם המפרץ -->
+
             <div class="property-card">
+
                 <div class="card-img-wrapper">
-                    <span class="card-badge">פנטהאוז יוקרתי</span>
-                    <img src="property_1.jpg" alt="פנטהאוז קסם המפרץ" class="card-img" loading="lazy">
+
+                    <span class="card-badge">דירת גן יוקרתית</span>
+
+                    <img src="images/property_1.jpg" alt="קטלינה גארדן (Catalina Garden)" class="card-img">
+
                 </div>
+
                 <div class="card-body">
-                    <h3 class="card-title">פנטהאוז קסם המפרץ</h3>
+
+                    <h3 class="card-title">קטלינה גארדן (Catalina Garden)</h3>
+
                     <div class="card-location">📍 אילת | נוף פנורמי לים</div>
+
                     <p class="card-desc">4 חדרי שינה, בריכה פרטית מחוממת, מעלית פרטית, מרפסת שמש ענקית ושולחן פינג-פונג. אידיאלי לקבוצות ומשפחות.</p>
-                    <button class="btn-order-now" onclick="openModal('פנטהאוז קסם המפרץ')">להזמנות לחצו כאן</button>
+
+                    <button class="btn-order-now" onclick="openModal('קטלינה גארדן (Catalina Garden)')">להזמנות לחצו כאן</button>
+
                 </div>
+
             </div>
 
-            <!-- 2. כליל הים -->
-            <div class="property-card">
-                <div class="card-img-wrapper">
-                    <span class="card-badge">מתחם אירוח</span>
-                    <img src="property_2.jpg" alt="כליל הים" class="card-img" loading="lazy">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-title">כליל הים</h3>
-                    <div class="card-location">📍 אילת | נוף להרים ולים</div>
-                    <p class="card-desc">בריכת שחייה פרטית, חצר מטופחת, מרפסת שמש ואווירה פסטורלית ושקטה במיוחד.</p>
-                    <button class="btn-order-now" onclick="openModal('כליל הים')">להזמנות לחצו כאן</button>
-                </div>
-            </div>
 
-            <!-- 3. וילה אקווה ויסטה -->
+
             <div class="property-card">
+
                 <div class="card-img-wrapper">
+
                     <span class="card-badge">וילה יוקרתית</span>
-                    <img src="property_3.jpg" alt="וילה אקווה ויסטה" class="card-img" loading="lazy">
+
+                    <img src="images/property_2.jpg" alt="אקווה ויסטה" class="card-img">
+
                 </div>
+
                 <div class="card-body">
-                    <h3 class="card-title">וילה אקווה ויסטה</h3>
-                    <div class="card-location">📍 אילת | קו ראשון לנוף</div>
-                    <p class="card-desc">בריכת שחייה פרטית, מתחם חוץ יוקרתי, חללים מרווחים, מאובזרת לחלוטין לאירוח משפחות וקבוצות.</p>
-                    <button class="btn-order-now" onclick="openModal('וילה אקווה ויסטה')">להזמנות לחצו כאן</button>
+
+                    <h3 class="card-title">אקווה ויסטה</h3>
+
+                    <div class="card-location">📍 אילת | נוף להרים ולים</div>
+
+                    <p class="card-desc">בריכת שחייה פרטית, חצר מטופחת, מרפסת שמש ואווירה פסטורלית ושקטה במיוחד.</p>
+
+                    <button class="btn-order-now" onclick="openModal('אקווה ויסטה')">להזמנות לחצו כאן</button>
+
                 </div>
+
             </div>
+
+
+
+            <div class="property-card">
+
+                <div class="card-img-wrapper">
+
+                    <span class="card-badge">דירה יוקרתית</span>
+
+                    <img src="images/property_3.jpg" alt="כליל הים" class="card-img">
+
+                </div>
+
+                <div class="card-body">
+
+                    <h3 class="card-title">כליל הים</h3>
+
+                    <div class="card-location">📍 אילת | קו ראשון לנוף</div>
+
+                    <p class="card-desc">בריכת שחייה פרטית, מתחם חוץ יוקרתי, חללים מרווחים, מאובזרת לחלוטין לאירוח משפחות וקבוצות.</p>
+
+                    <button class="btn-order-now" onclick="openModal('כליל הים')">להזמנות לחצו כאן</button>
+
+                </div>
+
+            </div>
+
+
 
             <!-- 4. אקווה סול -->
+
             <div class="property-card">
+
                 <div class="card-img-wrapper">
-                    <span class="card-badge">וילת בריכה</span>
-                    <img src="property_4.jpg" alt="אקווה סול" class="card-img" loading="lazy">
+
+                    <span class="card-badge">פנטאהוז על הגג</span>
+
+                    <img src="images/property_4.jpg" alt="פנטאהוז קסם המפרץ" class="card-img">
+
                 </div>
+
                 <div class="card-body">
-                    <h3 class="card-title">אקווה סול (Aqua Sol)</h3>
+
+                    <h3 class="card-title">פנטאהוז קסם המפרץ</h3>
+
                     <div class="card-location">📍 אילת | מתחם יוקרתי</div>
+
                     <p class="card-desc">עיצוב מודרני מרהיב, בריכת שחייה פרטית, מרפסת שיזוף ואווירת חופשה מושלמת.</p>
-                    <button class="btn-order-now" onclick="openModal('אקווה סול (Aqua Sol)')">להזמנות לחצו כאן</button>
+
+                    <button class="btn-order-now" onclick="openModal('פנטאהוז קסם המפרץ')">להזמנות לחצו כאן</button>
+
                 </div>
+
             </div>
+
+
 
             <!-- 5. פנינת הנוף -->
+
             <div class="property-card">
+
                 <div class="card-img-wrapper">
+
                     <span class="card-badge">סוויטת בוטיק</span>
-                    <img src="property_5.jpg" alt="פנינת הנוף" class="card-img" loading="lazy">
+
+                    <img src="images/property_5.jpg" alt="אקווה סול" class="card-img">
+
                 </div>
+
                 <div class="card-body">
-                    <h3 class="card-title">פנינת הנוף</h3>
+
+                    <h3 class="card-title">אקווה סול</h3>
+
                     <div class="card-location">📍 אילת | נוף עוצר נשימה</div>
+
                     <p class="card-desc">דירת אירוח יוקרתית בעיצוב אלגנטי, מאובזרת מא' ועד ת' ומציעה פרטיות מלאה ושקט.</p>
-                    <button class="btn-order-now" onclick="openModal('פנינת הנוף')">להזמנות לחצו כאן</button>
+
+                    <button class="btn-order-now" onclick="openModal('אקווה סול')">להזמנות לחצו כאן</button>
+
                 </div>
+
             </div>
+
+
 
             <!-- 6. סוויטת מנור -->
+
             <div class="property-card">
+
                 <div class="card-img-wrapper">
+
                     <span class="card-badge">סוויטה יוקרתית</span>
-                    <img src="property_6.jpg" alt="סוויטת מנור" class="card-img" loading="lazy">
+
+                    <img src="images/property_6.jpg" alt="סוויטת מנור" class="card-img">
+
                 </div>
+
                 <div class="card-body">
+
                     <h3 class="card-title">סוויטת מנור</h3>
+
                     <div class="card-location">📍 אילת | לוקיישן מעולה</div>
+
                     <p class="card-desc">סוויטה מפנקת בסטנדרט אירוח גבוה, מתאימה לזוגות או משפחות המחפשות נופש איכותי.</p>
+
                     <button class="btn-order-now" onclick="openModal('סוויטת מנור')">להזמנות לחצו כאן</button>
+
                 </div>
+
             </div>
+
+
 
             <!-- 7. קטלינה גארדן -->
+
             <div class="property-card">
+
                 <div class="card-img-wrapper">
-                    <span class="card-badge">דירת גן יוקרתית</span>
-                    <img src="property_7.jpg" alt="קטלינה גארדן" class="card-img" loading="lazy">
+
+                    <span class="card-badge">דירת גן חלומית</span>
+
+                    <img src="images/property_7.jpg" alt="פנינת הנוף" class="card-img">
+
                 </div>
+
                 <div class="card-body">
-                    <h3 class="card-title">קטלינה גארדן (Catalina Garden)</h3>
+
+                    <h3 class="card-title">פנינת הנוף</h3>
+
                     <div class="card-location">📍 אילת | גינה פרטית מוצלת</div>
+
                     <p class="card-desc">דירת גן מעוצבת ומאובזרת, פינת ישיבה חיצונית מפנקת, מתאימה למשפחות ולקבוצות המחפשות אווירה ביתית ויוקרתית.</p>
-                    <button class="btn-order-now" onclick="openModal('קטלינה גארדן (Catalina Garden)')">להזמנות לחצו כאן</button>
+
+                    <button class="btn-order-now" onclick="openModal('פנינת הנוף')">להזמנות לחצו כאן</button>
+
                 </div>
+
             </div>
+
+
 
             <!-- 8. וילה קורנית -->
+
             <div class="property-card">
+
                 <div class="card-img-wrapper">
+
                     <span class="card-badge">וילת יוקרה</span>
-                    <img src="property_8.jpg" alt="וילה קורנית" class="card-img" loading="lazy">
+
+                    <img src="images/property_8.jpg" alt="וילה קורנית (Villa Marina Bay)" class="card-img">
+
                 </div>
+
                 <div class="card-body">
+
                     <h3 class="card-title">וילה קורנית (Villa Marina Bay)</h3>
+
                     <div class="card-location">📍 אילת | מתחם אירוח מרווח</div>
+
                     <p class="card-desc">וילת נופש מרשימה ומאובזרת ברמה גבוהה, מתאימה למשפחות מורחבות ולקבוצות גדולות המחפשות חופשה מפנקת באילת.</p>
+
                     <button class="btn-order-now" onclick="openModal('וילה קורנית (Villa Marina Bay)')">להזמנות לחצו כאן</button>
+
                 </div>
+
             </div>
 
+
+
         </div>
+
     </div>
+
+
 
     <!-- Modal Form -->
+
     <div class="modal" id="bookingModal">
+
         <div class="modal-content">
+
             <button class="close-modal" onclick="closeModal()">&times;</button>
+
             <h2 class="modal-h2" id="modalTitle">בדיקת זמינות והזמנה</h2>
+
             <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px;">הזינו פרטים והמערכת תעביר אתכם לסליקה מאובטחת בסולק EASYGO:</p>
+
             <form onsubmit="handleBooking(event)">
-                <input type="hidden" id="selectedPropertyInput" name="property_name">
+
                 <input type="text" class="form-input" placeholder="שם מלא *" required>
+
                 <input type="tel" class="form-input" placeholder="טלפון נייד *" required>
+
                 <input type="date" class="form-input" placeholder="תאריך הגעה" required>
+
                 <input type="date" class="form-input" placeholder="תאריך עזיבה" required>
+
                 <button type="submit" class="btn-order-now" style="width: 100%; margin-top: 10px; background: #38bdf8; color: white;">המשך לתשלום מאובטח ב-EASYGO ➔</button>
+
             </form>
+
         </div>
+
     </div>
 
+
+
     <footer>
+
         <p>© 2026 DREAMY RENT. כל הזכויות שמורות. סליקה מאובטחת באמצעות EASYGO.</p>
+
     </footer>
 
+
+
     <script>
+
         function openModal(propertyName) {
+
             document.getElementById('modalTitle').innerText = 'הזמנה עבור: ' + propertyName;
-            document.getElementById('selectedPropertyInput').value = propertyName;
+
             document.getElementById('bookingModal').style.display = 'flex';
+
         }
+
+
 
         function closeModal() {
+
             document.getElementById('bookingModal').style.display = 'none';
+
         }
+
+
 
         function handleBooking(event) {
+
             event.preventDefault();
-            const selectedProperty = document.getElementById('selectedPropertyInput').value || 'הנכס הנבחר';
-            alert('הפרטים עבור ' + selectedProperty + ' התקבלו! כעת תועברו לקישור הסליקה המאובטח של EASYGO לעדכון היומן והשלמת התשלום.');
+
+            alert('הפרטים התקבלו! כעת תועברו לקישור הסליקה המאובטח של EASYGO לעדכון היומן והשלמת התשלום.');
+
             closeModal();
+
         }
 
+
+
         window.onclick = function(event) {
+
             const modal = document.getElementById('bookingModal');
+
             if (event.target == modal) {
+
                 closeModal();
+
             }
+
         }
+
     </script>
+
 </body>
+
 </html>
